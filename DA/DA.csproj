@@ -46,14 +46,20 @@
     <Compile Include="Abstract\IBookMasterDA.cs" />
     <Compile Include="Abstract\IMemberMaster.cs" />
     <Compile Include="Abstract\IPlanMasterDA.cs" />
+    <Compile Include="Abstract\IPurchaseDA.cs" />
+    <Compile Include="Abstract\IRackMasterDA.cs" />
     <Compile Include="Abstract\IRoleMasterDA.cs" />
+    <Compile Include="Abstract\ISecRackMapDA.cs" />
     <Compile Include="Abstract\ISectionMasterDA.cs" />
     <Compile Include="Repository\AdminMasterDA.cs" />
     <Compile Include="Repository\BookMasterDA.cs" />
     <Compile Include="Repository\MemberMasteDA.cs" />
     <Compile Include="Repository\PlanMasterDA.cs" />
+    <Compile Include="Repository\PurchaseDA.cs" />
+    <Compile Include="Repository\RackMasterDA.cs" />
     <Compile Include="Repository\RoleMasterDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\SecRackMapDA.cs" />
     <Compile Include="Repository\SectionMasterDA.cs" />
   </ItemGroup>
   <ItemGroup>

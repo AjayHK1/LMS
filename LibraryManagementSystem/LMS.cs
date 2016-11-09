@@ -192,5 +192,30 @@ namespace LibraryManagementSystem
             obj.StartPosition = FormStartPosition.CenterParent;
             obj.Show();
         }
+
+        private void rackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRack obj = new frmRack();
+            obj.MdiParent = this;
+            obj.StartPosition = FormStartPosition.CenterParent;
+            obj.Show();
+            
+        }
+
+        private void sectionRackMapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSectionRackMap obj = new frmSectionRackMap();
+            obj.MdiParent = this;
+            obj.StartPosition = FormStartPosition.CenterParent;
+            obj.Show();
+        }
+
+        private void stockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StockReport StockReport = new StockReport(); //stockreport
+            StockReport.MdiParent = this;
+            StockReport.StartPosition = FormStartPosition.CenterParent;
+            StockReport.Show();
+        }
     }
 }

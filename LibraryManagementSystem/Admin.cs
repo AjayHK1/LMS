@@ -71,27 +71,27 @@ namespace LibraryManagementSystem
             GetAdminProfileId();
             LoadRoleNames();
             LoadComboStatus();
-            
+
         }
 
         public void LoadGridDetails()
         {
             try
             {
-               dt = adminBL.LoadGridDetails();
-               for (int i = 0; i < dt.Rows.Count; i++)
-               {
-                   dataGridView1.Rows.Add();
-                   dataGridView1["Column1", i].Value = dt.Rows[i]["Pro_User_Id"];
-                   dataGridView1["Column2", i].Value = dt.Rows[i]["Pro_Name"];
-                   dataGridView1["Column3", i].Value = dt.Rows[i]["Pro_Email"];
-                   dataGridView1["Column4", i].Value = dt.Rows[i]["Pro_Mobile"];
-                   dataGridView1["Column5", i].Value = dt.Rows[i]["Pro_Password"];
-                   dataGridView1["Column6", i].Value = dt.Rows[i]["Pro_Address"];
-                   dataGridView1["Column7", i].Value = dt.Rows[i]["Pro_Role"];
-                   dataGridView1["Column8", i].Value = dt.Rows[i]["Pro_Status"];
-                   dataGridView1["Column8", i].Value = dt.Rows[i]["Pro_Status"].Equals(1) ? "Active" : "InActive"; 
-               }
+                dt = adminBL.LoadGridDetails();
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    dataGridView1.Rows.Add();
+                    dataGridView1["Column1", i].Value = dt.Rows[i]["Pro_User_Id"];
+                    dataGridView1["Column2", i].Value = dt.Rows[i]["Pro_Name"];
+                    dataGridView1["Column3", i].Value = dt.Rows[i]["Pro_Email"];
+                    dataGridView1["Column4", i].Value = dt.Rows[i]["Pro_Mobile"];
+                    dataGridView1["Column5", i].Value = dt.Rows[i]["Pro_Password"];
+                    dataGridView1["Column6", i].Value = dt.Rows[i]["Pro_Address"];
+                    dataGridView1["Column7", i].Value = dt.Rows[i]["Pro_Role"];
+                    dataGridView1["Column8", i].Value = dt.Rows[i]["Pro_Status"];
+                    dataGridView1["Column8", i].Value = dt.Rows[i]["Pro_Status"].Equals(1) ? "Active" : "InActive";
+                }
             }
 
             catch (Exception ex)
@@ -170,7 +170,7 @@ namespace LibraryManagementSystem
                 //adminBL.SaveBookMasterData(admin);
                 if (adminBL.SaveProfileData(admin) > 0)
                 {
-                    MessageBox.Show("Record is Saved","Information",MessageBoxButtons.OK);
+                    MessageBox.Show("Record is Saved", "Information", MessageBoxButtons.OK);
                 }
                 else
                 {
@@ -182,7 +182,7 @@ namespace LibraryManagementSystem
             {
                 string errorMessage = ErrorHandling.Class1.CreateErrorMessage(ex);
                 ErrorHandling.Class1.LogFileWrite(errorMessage);
-                
+
             }
 
         }
@@ -238,7 +238,38 @@ namespace LibraryManagementSystem
 
         public string GetRoleName(int id)
         {
-           return adminBL.RetrieveRoleName(id);
+            return adminBL.RetrieveRoleName(id);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DeleteProfileDetails();
+        }
+
+        public void DeleteProfileDetails()
+        {
+            try
+            {
+                admin = new AdminMaster();
+                admin.ProUserId = Convert.ToInt32(txtUserID.Text);
+
+                adminBL = new AdminMasterBL();
+                int n = adminBL.DeleteProfileDetails(admin);
+                if (n > 0)
+                {
+                    MessageBox.Show("Record is Updated", "Information", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Record is Not Updated..Please Try Again", "Information", MessageBoxButtons.OK);
+                }
+            }
+
+            catch (Exception ex)
+            {
+                string errorMessage = ErrorHandling.Class1.CreateErrorMessage(ex);
+                ErrorHandling.Class1.LogFileWrite(errorMessage);
+            }
         }
     }
 }

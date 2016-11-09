@@ -16,5 +16,6 @@ namespace DA.Abstract
         int UpdateProfileDataToDB(AdminMaster admin);
         DataTable LoadGridDetailsFromDB();
         string RetrieveRoleNameFromDB(int id);
+        int DeleteProfileDetailsFromDB(AdminMaster admin);
     }
 }

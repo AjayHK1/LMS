@@ -29,32 +29,32 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblId = new System.Windows.Forms.Label();
-            this.txt_SecRac_ID = new System.Windows.Forms.TextBox();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblCount = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.cmbSectioName = new System.Windows.Forms.ComboBox();
+            this.cmbRackName = new System.Windows.Forms.ComboBox();
             this.txtPrint = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.txt_SecRac_ID = new System.Windows.Forms.TextBox();
+            this.lblId = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.cmbRackName = new System.Windows.Forms.ComboBox();
-            this.cmbSectioName = new System.Windows.Forms.ComboBox();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SectionRackId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RackName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SectionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrintOrder = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblCount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -83,21 +83,128 @@
             this.panel1.Size = new System.Drawing.Size(545, 214);
             this.panel1.TabIndex = 0;
             // 
-            // lblId
+            // lblCount
             // 
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(6, 16);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(84, 13);
-            this.lblId.TabIndex = 0;
-            this.lblId.Text = "Section Rack Id";
+            this.lblCount.AutoSize = true;
+            this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCount.ForeColor = System.Drawing.Color.Red;
+            this.lblCount.Location = new System.Drawing.Point(456, 126);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(0, 13);
+            this.lblCount.TabIndex = 15;
             // 
-            // txt_SecRac_ID
+            // label6
             // 
-            this.txt_SecRac_ID.Location = new System.Drawing.Point(128, 12);
-            this.txt_SecRac_ID.Name = "txt_SecRac_ID";
-            this.txt_SecRac_ID.Size = new System.Drawing.Size(121, 20);
-            this.txt_SecRac_ID.TabIndex = 1;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(417, 96);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(124, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Total No Of Records";
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(317, 173);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 13;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(317, 126);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 12;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.Control;
+            this.btnUpdate.Location = new System.Drawing.Point(317, 79);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 11;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.SystemColors.Control;
+            this.btnNew.Location = new System.Drawing.Point(317, 32);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.TabIndex = 10;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // cmbSectioName
+            // 
+            this.cmbSectioName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSectioName.FormattingEnabled = true;
+            this.cmbSectioName.Location = new System.Drawing.Point(128, 99);
+            this.cmbSectioName.Name = "cmbSectioName";
+            this.cmbSectioName.Size = new System.Drawing.Size(121, 21);
+            this.cmbSectioName.TabIndex = 9;
+            // 
+            // cmbRackName
+            // 
+            this.cmbRackName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRackName.FormattingEnabled = true;
+            this.cmbRackName.Location = new System.Drawing.Point(128, 55);
+            this.cmbRackName.Name = "cmbRackName";
+            this.cmbRackName.Size = new System.Drawing.Size(121, 21);
+            this.cmbRackName.TabIndex = 8;
+            // 
+            // txtPrint
+            // 
+            this.txtPrint.Location = new System.Drawing.Point(128, 143);
+            this.txtPrint.Name = "txtPrint";
+            this.txtPrint.Size = new System.Drawing.Size(121, 20);
+            this.txtPrint.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(41, 189);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Status";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(27, 148);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Print Order";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Section Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Rack Name";
             // 
             // cmbStatus
             // 
@@ -109,48 +216,21 @@
             this.cmbStatus.TabIndex = 2;
             this.cmbStatus.SelectedIndexChanged += new System.EventHandler(this.cmbStatus_SelectedIndexChanged);
             // 
-            // label2
+            // txt_SecRac_ID
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Rack Name";
+            this.txt_SecRac_ID.Location = new System.Drawing.Point(128, 12);
+            this.txt_SecRac_ID.Name = "txt_SecRac_ID";
+            this.txt_SecRac_ID.Size = new System.Drawing.Size(121, 20);
+            this.txt_SecRac_ID.TabIndex = 1;
             // 
-            // label3
+            // lblId
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 108);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Section Name";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 148);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Print Order";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(41, 189);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Status";
-            // 
-            // txtPrint
-            // 
-            this.txtPrint.Location = new System.Drawing.Point(128, 143);
-            this.txtPrint.Name = "txtPrint";
-            this.txtPrint.Size = new System.Drawing.Size(121, 20);
-            this.txtPrint.TabIndex = 7;
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(6, 16);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(84, 13);
+            this.lblId.TabIndex = 0;
+            this.lblId.Text = "Section Rack Id";
             // 
             // textBox3
             // 
@@ -168,62 +248,6 @@
             this.txtSearch.TabIndex = 9;
             this.txtSearch.Visible = false;
             // 
-            // cmbRackName
-            // 
-            this.cmbRackName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbRackName.FormattingEnabled = true;
-            this.cmbRackName.Location = new System.Drawing.Point(128, 55);
-            this.cmbRackName.Name = "cmbRackName";
-            this.cmbRackName.Size = new System.Drawing.Size(121, 21);
-            this.cmbRackName.TabIndex = 8;
-            // 
-            // cmbSectioName
-            // 
-            this.cmbSectioName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSectioName.FormattingEnabled = true;
-            this.cmbSectioName.Location = new System.Drawing.Point(128, 99);
-            this.cmbSectioName.Name = "cmbSectioName";
-            this.cmbSectioName.Size = new System.Drawing.Size(121, 21);
-            this.cmbSectioName.TabIndex = 9;
-            // 
-            // btnNew
-            // 
-            this.btnNew.BackColor = System.Drawing.SystemColors.Control;
-            this.btnNew.Location = new System.Drawing.Point(317, 32);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(75, 23);
-            this.btnNew.TabIndex = 10;
-            this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.Control;
-            this.btnUpdate.Location = new System.Drawing.Point(317, 79);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 11;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(317, 126);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 12;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(317, 173);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 13;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label1);
@@ -233,6 +257,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(545, 205);
             this.panel2.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(396, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Search :";
             // 
             // dataGridView1
             // 
@@ -247,6 +280,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(511, 166);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // SectionRackId
             // 
@@ -273,33 +307,6 @@
             this.Status.HeaderText = "Status";
             this.Status.Name = "Status";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(396, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Search :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(417, 96);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Total No Of Records";
-            // 
-            // lblCount
-            // 
-            this.lblCount.AutoSize = true;
-            this.lblCount.Location = new System.Drawing.Point(456, 126);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(0, 13);
-            this.lblCount.TabIndex = 15;
-            // 
             // frmSectionRackMap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,6 +318,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmSectionRackMap";
             this.Text = "Section Rack Map";
+            this.Load += new System.EventHandler(this.frmSectionRackMap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

@@ -33,9 +33,11 @@
             this.mastersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.profileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sectionRackMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.memberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.planToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +53,6 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.profileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +76,7 @@
             this.bookToolStripMenuItem,
             this.sectionToolStripMenuItem,
             this.rackToolStripMenuItem,
+            this.sectionRackMapToolStripMenuItem,
             this.memberToolStripMenuItem,
             this.planToolStripMenuItem});
             this.mastersToolStripMenuItem.Name = "mastersToolStripMenuItem";
@@ -87,48 +89,63 @@
             this.roleToolStripMenuItem,
             this.profileToolStripMenuItem1});
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            this.profileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.profileToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.profileToolStripMenuItem.Text = "Admin";
             this.profileToolStripMenuItem.Click += new System.EventHandler(this.profileToolStripMenuItem_Click);
             // 
             // roleToolStripMenuItem
             // 
             this.roleToolStripMenuItem.Name = "roleToolStripMenuItem";
-            this.roleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.roleToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.roleToolStripMenuItem.Text = "Role";
             this.roleToolStripMenuItem.Click += new System.EventHandler(this.roleToolStripMenuItem_Click);
+            // 
+            // profileToolStripMenuItem1
+            // 
+            this.profileToolStripMenuItem1.Name = "profileToolStripMenuItem1";
+            this.profileToolStripMenuItem1.Size = new System.Drawing.Size(108, 22);
+            this.profileToolStripMenuItem1.Text = "Profile";
+            this.profileToolStripMenuItem1.Click += new System.EventHandler(this.profileToolStripMenuItem1_Click);
             // 
             // bookToolStripMenuItem
             // 
             this.bookToolStripMenuItem.Name = "bookToolStripMenuItem";
-            this.bookToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bookToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.bookToolStripMenuItem.Text = "Book";
             this.bookToolStripMenuItem.Click += new System.EventHandler(this.bookToolStripMenuItem_Click);
             // 
             // sectionToolStripMenuItem
             // 
             this.sectionToolStripMenuItem.Name = "sectionToolStripMenuItem";
-            this.sectionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sectionToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.sectionToolStripMenuItem.Text = "Section";
             this.sectionToolStripMenuItem.Click += new System.EventHandler(this.sectionToolStripMenuItem_Click);
             // 
             // rackToolStripMenuItem
             // 
             this.rackToolStripMenuItem.Name = "rackToolStripMenuItem";
-            this.rackToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rackToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.rackToolStripMenuItem.Text = "Rack";
+            this.rackToolStripMenuItem.Click += new System.EventHandler(this.rackToolStripMenuItem_Click);
+            // 
+            // sectionRackMapToolStripMenuItem
+            // 
+            this.sectionRackMapToolStripMenuItem.Name = "sectionRackMapToolStripMenuItem";
+            this.sectionRackMapToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.sectionRackMapToolStripMenuItem.Text = "Section Rack Map";
+            this.sectionRackMapToolStripMenuItem.Click += new System.EventHandler(this.sectionRackMapToolStripMenuItem_Click);
             // 
             // memberToolStripMenuItem
             // 
             this.memberToolStripMenuItem.Name = "memberToolStripMenuItem";
-            this.memberToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.memberToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.memberToolStripMenuItem.Text = "Member";
             this.memberToolStripMenuItem.Click += new System.EventHandler(this.memberToolStripMenuItem_Click);
             // 
             // planToolStripMenuItem
             // 
             this.planToolStripMenuItem.Name = "planToolStripMenuItem";
-            this.planToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.planToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.planToolStripMenuItem.Text = "Plan";
             this.planToolStripMenuItem.Click += new System.EventHandler(this.planToolStripMenuItem_Click);
             // 
@@ -185,25 +202,26 @@
             // memberToolStripMenuItem1
             // 
             this.memberToolStripMenuItem1.Name = "memberToolStripMenuItem1";
-            this.memberToolStripMenuItem1.Size = new System.Drawing.Size(139, 22);
+            this.memberToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.memberToolStripMenuItem1.Text = "Member";
             // 
             // stockToolStripMenuItem
             // 
             this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
-            this.stockToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.stockToolStripMenuItem.Text = "Stock";
+            this.stockToolStripMenuItem.Click += new System.EventHandler(this.stockToolStripMenuItem_Click);
             // 
             // bookInOutToolStripMenuItem
             // 
             this.bookInOutToolStripMenuItem.Name = "bookInOutToolStripMenuItem";
-            this.bookInOutToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.bookInOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bookInOutToolStripMenuItem.Text = "Book In/Out";
             // 
             // collectionToolStripMenuItem
             // 
             this.collectionToolStripMenuItem.Name = "collectionToolStripMenuItem";
-            this.collectionToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.collectionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.collectionToolStripMenuItem.Text = "Collection";
             // 
             // statusStrip
@@ -221,13 +239,6 @@
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
-            // 
-            // profileToolStripMenuItem1
-            // 
-            this.profileToolStripMenuItem1.Name = "profileToolStripMenuItem1";
-            this.profileToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.profileToolStripMenuItem1.Text = "Profile";
-            this.profileToolStripMenuItem1.Click += new System.EventHandler(this.profileToolStripMenuItem1_Click);
             // 
             // LMS
             // 
@@ -277,6 +288,7 @@
         private System.Windows.Forms.ToolStripMenuItem collectionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem sectionRackMapToolStripMenuItem;
     }
 }
 

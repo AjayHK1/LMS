@@ -16,5 +16,6 @@ namespace BL
         int RetrieveProUserId();
         DataTable LoadGridDetails();
         string RetrieveRoleName(int id);
+        int DeleteProfileDetails(AdminMaster admin);
     }
 }

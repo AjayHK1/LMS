@@ -38,32 +38,32 @@
             this.lblRate = new System.Windows.Forms.Label();
             this.lblAmount = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnView = new System.Windows.Forms.Button();
-            this.txtPurchaseId = new System.Windows.Forms.TextBox();
-            this.txtPurchaseFrom = new System.Windows.Forms.TextBox();
-            this.dtpPurchaseDate = new System.Windows.Forms.DateTimePicker();
-            this.txtQty = new System.Windows.Forms.TextBox();
-            this.txtBookId = new System.Windows.Forms.TextBox();
-            this.txtBookName = new System.Windows.Forms.TextBox();
-            this.txtRate = new System.Windows.Forms.TextBox();
-            this.txtAmount = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
+            this.txtAmount = new System.Windows.Forms.TextBox();
+            this.txtRate = new System.Windows.Forms.TextBox();
+            this.txtBookName = new System.Windows.Forms.TextBox();
+            this.txtBookId = new System.Windows.Forms.TextBox();
+            this.txtQty = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SINo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnView = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtPurchaseId = new System.Windows.Forms.TextBox();
+            this.txtPurchaseFrom = new System.Windows.Forms.TextBox();
+            this.dtpPurchaseDate = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -74,7 +74,7 @@
             // lblPurchaseId
             // 
             this.lblPurchaseId.AutoSize = true;
-            this.lblPurchaseId.Location = new System.Drawing.Point(28, 52);
+            this.lblPurchaseId.Location = new System.Drawing.Point(41, 52);
             this.lblPurchaseId.Name = "lblPurchaseId";
             this.lblPurchaseId.Size = new System.Drawing.Size(70, 13);
             this.lblPurchaseId.TabIndex = 0;
@@ -101,7 +101,7 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(472, 92);
+            this.lblStatus.Location = new System.Drawing.Point(510, 95);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(43, 13);
             this.lblStatus.TabIndex = 3;
@@ -166,6 +166,51 @@
             this.panel1.Size = new System.Drawing.Size(690, 45);
             this.panel1.TabIndex = 9;
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(637, 9);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(48, 23);
+            this.btnAdd.TabIndex = 20;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // txtAmount
+            // 
+            this.txtAmount.Location = new System.Drawing.Point(524, 11);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(100, 20);
+            this.txtAmount.TabIndex = 19;
+            // 
+            // txtRate
+            // 
+            this.txtRate.Location = new System.Drawing.Point(386, 11);
+            this.txtRate.Name = "txtRate";
+            this.txtRate.Size = new System.Drawing.Size(100, 20);
+            this.txtRate.TabIndex = 18;
+            // 
+            // txtBookName
+            // 
+            this.txtBookName.Location = new System.Drawing.Point(130, 11);
+            this.txtBookName.Name = "txtBookName";
+            this.txtBookName.Size = new System.Drawing.Size(100, 20);
+            this.txtBookName.TabIndex = 17;
+            // 
+            // txtBookId
+            // 
+            this.txtBookId.Location = new System.Drawing.Point(9, 11);
+            this.txtBookId.Name = "txtBookId";
+            this.txtBookId.Size = new System.Drawing.Size(100, 20);
+            this.txtBookId.TabIndex = 16;
+            // 
+            // txtQty
+            // 
+            this.txtQty.Location = new System.Drawing.Point(263, 11);
+            this.txtQty.Name = "txtQty";
+            this.txtQty.Size = new System.Drawing.Size(61, 20);
+            this.txtQty.TabIndex = 15;
+            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -175,6 +220,13 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(690, 149);
             this.panel2.TabIndex = 10;
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(-1, 165);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(676, 35);
+            this.panel3.TabIndex = 12;
             // 
             // dataGridView1
             // 
@@ -190,156 +242,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(680, 141);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // btnNew
-            // 
-            this.btnNew.Location = new System.Drawing.Point(212, 12);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(75, 23);
-            this.btnNew.TabIndex = 11;
-            this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(-1, 165);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(676, 35);
-            this.panel3.TabIndex = 12;
-            // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.btnView);
-            this.panel4.Controls.Add(this.btnSave);
-            this.panel4.Controls.Add(this.btnDelete);
-            this.panel4.Controls.Add(this.btnUpdate);
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.btnNew);
-            this.panel4.Location = new System.Drawing.Point(35, 428);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(686, 47);
-            this.panel4.TabIndex = 12;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 17);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 13);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Total Items :";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(302, 12);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 13;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(394, 11);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 14;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(487, 11);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 15;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // btnView
-            // 
-            this.btnView.Location = new System.Drawing.Point(582, 11);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(75, 23);
-            this.btnView.TabIndex = 16;
-            this.btnView.Text = "View";
-            this.btnView.UseVisualStyleBackColor = true;
-            // 
-            // txtPurchaseId
-            // 
-            this.txtPurchaseId.Location = new System.Drawing.Point(104, 49);
-            this.txtPurchaseId.Name = "txtPurchaseId";
-            this.txtPurchaseId.Size = new System.Drawing.Size(100, 20);
-            this.txtPurchaseId.TabIndex = 13;
-            // 
-            // txtPurchaseFrom
-            // 
-            this.txtPurchaseFrom.Location = new System.Drawing.Point(560, 50);
-            this.txtPurchaseFrom.Name = "txtPurchaseFrom";
-            this.txtPurchaseFrom.Size = new System.Drawing.Size(100, 20);
-            this.txtPurchaseFrom.TabIndex = 14;
-            // 
-            // dtpPurchaseDate
-            // 
-            this.dtpPurchaseDate.Location = new System.Drawing.Point(111, 89);
-            this.dtpPurchaseDate.Name = "dtpPurchaseDate";
-            this.dtpPurchaseDate.Size = new System.Drawing.Size(200, 20);
-            this.dtpPurchaseDate.TabIndex = 15;
-            // 
-            // txtQty
-            // 
-            this.txtQty.Location = new System.Drawing.Point(263, 11);
-            this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(61, 20);
-            this.txtQty.TabIndex = 15;
-            // 
-            // txtBookId
-            // 
-            this.txtBookId.Location = new System.Drawing.Point(9, 11);
-            this.txtBookId.Name = "txtBookId";
-            this.txtBookId.Size = new System.Drawing.Size(100, 20);
-            this.txtBookId.TabIndex = 16;
-            // 
-            // txtBookName
-            // 
-            this.txtBookName.Location = new System.Drawing.Point(130, 11);
-            this.txtBookName.Name = "txtBookName";
-            this.txtBookName.Size = new System.Drawing.Size(100, 20);
-            this.txtBookName.TabIndex = 17;
-            // 
-            // txtRate
-            // 
-            this.txtRate.Location = new System.Drawing.Point(386, 11);
-            this.txtRate.Name = "txtRate";
-            this.txtRate.Size = new System.Drawing.Size(100, 20);
-            this.txtRate.TabIndex = 18;
-            // 
-            // txtAmount
-            // 
-            this.txtAmount.Location = new System.Drawing.Point(524, 11);
-            this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(100, 20);
-            this.txtAmount.TabIndex = 19;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(637, 9);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(48, 23);
-            this.btnAdd.TabIndex = 20;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(517, 400);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 13);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Total Amount :";
             // 
             // SINo
             // 
@@ -371,13 +273,115 @@
             this.Amount.HeaderText = "Amount";
             this.Amount.Name = "Amount";
             // 
+            // btnNew
+            // 
+            this.btnNew.Location = new System.Drawing.Point(212, 11);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.TabIndex = 11;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.btnView);
+            this.panel4.Controls.Add(this.btnSave);
+            this.panel4.Controls.Add(this.btnDelete);
+            this.panel4.Controls.Add(this.btnUpdate);
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.btnNew);
+            this.panel4.Location = new System.Drawing.Point(31, 426);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(686, 47);
+            this.panel4.TabIndex = 12;
+            // 
+            // btnView
+            // 
+            this.btnView.Location = new System.Drawing.Point(582, 11);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(75, 23);
+            this.btnView.TabIndex = 16;
+            this.btnView.Text = "View";
+            this.btnView.UseVisualStyleBackColor = true;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(487, 11);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 15;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(394, 11);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 14;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(302, 12);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 13;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 17);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 13);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Total Items :";
+            // 
+            // txtPurchaseId
+            // 
+            this.txtPurchaseId.Location = new System.Drawing.Point(120, 49);
+            this.txtPurchaseId.Name = "txtPurchaseId";
+            this.txtPurchaseId.Size = new System.Drawing.Size(105, 20);
+            this.txtPurchaseId.TabIndex = 13;
+            // 
+            // txtPurchaseFrom
+            // 
+            this.txtPurchaseFrom.Location = new System.Drawing.Point(560, 50);
+            this.txtPurchaseFrom.Name = "txtPurchaseFrom";
+            this.txtPurchaseFrom.Size = new System.Drawing.Size(100, 20);
+            this.txtPurchaseFrom.TabIndex = 14;
+            // 
+            // dtpPurchaseDate
+            // 
+            this.dtpPurchaseDate.Location = new System.Drawing.Point(119, 89);
+            this.dtpPurchaseDate.Name = "dtpPurchaseDate";
+            this.dtpPurchaseDate.Size = new System.Drawing.Size(106, 20);
+            this.dtpPurchaseDate.TabIndex = 15;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(517, 400);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(76, 13);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Total Amount :";
+            // 
             // cmbStatus
             // 
             this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(560, 92);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(121, 21);
+            this.cmbStatus.Size = new System.Drawing.Size(100, 21);
             this.cmbStatus.TabIndex = 17;
             // 
             // Purchase
@@ -405,6 +409,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Purchase";
             this.Text = "Purchase";
+            this.Load += new System.EventHandler(this.Purchase_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

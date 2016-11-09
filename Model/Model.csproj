@@ -44,8 +44,11 @@
     <Compile Include="Entities\BookMaster.cs" />
     <Compile Include="Entities\MemberMaster.cs" />
     <Compile Include="Entities\PlanMaster.cs" />
+    <Compile Include="Entities\PurchaseEntities.cs" />
+    <Compile Include="Entities\RackMaster.cs" />
     <Compile Include="Entities\RoleMaster.cs" />
     <Compile Include="Entities\SectionMaster.cs" />
+    <Compile Include="Entities\SectionRackMapMaster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

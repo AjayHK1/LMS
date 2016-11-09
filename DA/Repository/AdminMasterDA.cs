@@ -113,6 +113,30 @@ namespace DA.Repository
 
         }
 
+        public int DeleteProfileDetailsFromDB(AdminMaster admin)
+        {
+            try
+            {
+                cmd = new SqlCommand("spDeleteProfileMaster",connctn.ActiveCon());//Pro_User_Id
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Pro_User_Id",admin.ProUserId);
+                return cmd.ExecuteNonQuery();
+            }
+
+            catch (Exception ex)
+            {
+                string errorMessage = ErrorHandling.Class1.CreateErrorMessage(ex);
+                ErrorHandling.Class1.LogFileWrite(errorMessage);
+                return -1;
+            }
+
+            finally
+            {
+                connctn.CloseCon();
+            }
+
+        }
+
 
         public int RetrieveRoleIdFromDB(string name)
         {

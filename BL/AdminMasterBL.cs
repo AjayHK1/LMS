@@ -52,6 +52,11 @@ namespace BL
             }
         }
 
+        public int DeleteProfileDetails(AdminMaster admin)
+        {
+            return adminDA.DeleteProfileDetailsFromDB(admin);
+        }
+
         public int RetrieveRoleId(string name)
         {
             try

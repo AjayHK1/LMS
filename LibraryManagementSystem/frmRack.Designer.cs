@@ -32,16 +32,20 @@
             this.txtRackName = new System.Windows.Forms.TextBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblRackId = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.lblRackStatus = new System.Windows.Forms.Label();
+            this.cmbRackStatus = new System.Windows.Forms.ComboBox();
             this.lblRackName = new System.Windows.Forms.Label();
+            this.lblRackId = new System.Windows.Forms.Label();
             this.lblSearch = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.RackId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RackName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RackStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmbRackStatus = new System.Windows.Forms.ComboBox();
-            this.lblRackStatus = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +59,7 @@
             // 
             // txtRackName
             // 
-            this.txtRackName.Location = new System.Drawing.Point(113, 65);
+            this.txtRackName.Location = new System.Drawing.Point(113, 66);
             this.txtRackName.Name = "txtRackName";
             this.txtRackName.Size = new System.Drawing.Size(100, 20);
             this.txtRackName.TabIndex = 1;
@@ -69,6 +73,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnUpdate);
+            this.panel1.Controls.Add(this.btnSave);
+            this.panel1.Controls.Add(this.btnNew);
             this.panel1.Controls.Add(this.lblRackStatus);
             this.panel1.Controls.Add(this.cmbRackStatus);
             this.panel1.Controls.Add(this.lblRackName);
@@ -80,14 +88,63 @@
             this.panel1.Size = new System.Drawing.Size(330, 147);
             this.panel1.TabIndex = 3;
             // 
-            // lblRackId
+            // btnDelete
             // 
-            this.lblRackId.AutoSize = true;
-            this.lblRackId.Location = new System.Drawing.Point(18, 26);
-            this.lblRackId.Name = "lblRackId";
-            this.lblRackId.Size = new System.Drawing.Size(47, 13);
-            this.lblRackId.TabIndex = 3;
-            this.lblRackId.Text = "Rack ID";
+            this.btnDelete.Location = new System.Drawing.Point(242, 112);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 11;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(242, 83);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 10;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(242, 54);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnNew
+            // 
+            this.btnNew.Location = new System.Drawing.Point(242, 22);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.TabIndex = 8;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // lblRackStatus
+            // 
+            this.lblRackStatus.AutoSize = true;
+            this.lblRackStatus.Location = new System.Drawing.Point(17, 109);
+            this.lblRackStatus.Name = "lblRackStatus";
+            this.lblRackStatus.Size = new System.Drawing.Size(69, 13);
+            this.lblRackStatus.TabIndex = 6;
+            this.lblRackStatus.Text = "Rack Status:";
+            // 
+            // cmbRackStatus
+            // 
+            this.cmbRackStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRackStatus.FormattingEnabled = true;
+            this.cmbRackStatus.Location = new System.Drawing.Point(112, 106);
+            this.cmbRackStatus.Name = "cmbRackStatus";
+            this.cmbRackStatus.Size = new System.Drawing.Size(100, 21);
+            this.cmbRackStatus.TabIndex = 5;
             // 
             // lblRackName
             // 
@@ -97,6 +154,15 @@
             this.lblRackName.Size = new System.Drawing.Size(64, 13);
             this.lblRackName.TabIndex = 4;
             this.lblRackName.Text = "Rack Name";
+            // 
+            // lblRackId
+            // 
+            this.lblRackId.AutoSize = true;
+            this.lblRackId.Location = new System.Drawing.Point(18, 26);
+            this.lblRackId.Name = "lblRackId";
+            this.lblRackId.Size = new System.Drawing.Size(47, 13);
+            this.lblRackId.TabIndex = 3;
+            this.lblRackId.Text = "Rack ID";
             // 
             // lblSearch
             // 
@@ -125,6 +191,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(330, 146);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // RackId
             // 
@@ -141,28 +208,11 @@
             this.RackStatus.HeaderText = "Rack Status";
             this.RackStatus.Name = "RackStatus";
             // 
-            // cmbRackStatus
-            // 
-            this.cmbRackStatus.FormattingEnabled = true;
-            this.cmbRackStatus.Location = new System.Drawing.Point(112, 106);
-            this.cmbRackStatus.Name = "cmbRackStatus";
-            this.cmbRackStatus.Size = new System.Drawing.Size(100, 21);
-            this.cmbRackStatus.TabIndex = 5;
-            // 
-            // lblRackStatus
-            // 
-            this.lblRackStatus.AutoSize = true;
-            this.lblRackStatus.Location = new System.Drawing.Point(17, 109);
-            this.lblRackStatus.Name = "lblRackStatus";
-            this.lblRackStatus.Size = new System.Drawing.Size(69, 13);
-            this.lblRackStatus.TabIndex = 6;
-            this.lblRackStatus.Text = "Rack Status:";
-            // 
             // frmRack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 375);
+            this.ClientSize = new System.Drawing.Size(363, 373);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
@@ -171,6 +221,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmRack";
             this.Text = "Rack";
+            this.Load += new System.EventHandler(this.frmRack_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -195,5 +246,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RackStatus;
         private System.Windows.Forms.Label lblRackStatus;
         private System.Windows.Forms.ComboBox cmbRackStatus;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnNew;
     }
 }
