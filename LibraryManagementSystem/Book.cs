@@ -220,5 +220,31 @@ namespace LibraryManagementSystem
                 objbook.InserToErrorLog("Book", ex.Message.ToString(), "btnDelete_Click");
             }
         }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)13)
+            {
+                int Id;
+                if(int.TryParse(txtSearch.Text,out Id))
+                {
+                    LoadDataToGrid(Id);
+                }
+            }
+        }
+
+        public void LoadDataToGrid(int bookId)
+        {
+            BookMasterBL bookBL = new BookMasterBL();
+            DataTable dt = bookBL.LoadBookDataToGrid(bookId);
+            dataGridView1.Rows.Clear();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                dataGridView1.Rows.Add();
+                dataGridView1["BookId", i].Value = dt.Rows[i]["Book_Id"];
+                dataGridView1["BookName", i].Value = dt.Rows[i]["Book_Name"];
+                dataGridView1["BookStatus", i].Value = dt.Rows[i]["Book_Status"];
+            }
+        }
     }
 }
